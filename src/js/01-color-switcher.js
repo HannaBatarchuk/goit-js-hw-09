@@ -23,8 +23,8 @@ function onBtnClickStart(){
         const onChangeBgColor = getRandomHexColor();
         bodyStyle.style.backgroundColor = onChangeBgColor;
         }, 1000);
-        
-        btnStart.disabled = true;     
+        btnStart.disabled = true;   
+        btnStop.disabled = false;  
 }
 
 // - перевіряємо чи запущений таймер
@@ -34,6 +34,7 @@ function onBtnClickStop(){
     if (timerId !== null) {
         clearInterval(timerId);
         btnStart.disabled = false;
+        btnStop.disabled = true;
         console.log(`Після ${timerId} зупинки таймеру колір фону: ${bodyStyle.style.backgroundColor}`)
     }
 }
