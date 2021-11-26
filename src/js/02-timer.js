@@ -47,7 +47,7 @@ function onBtnStart() {
     minutesVal.textContent = convertMs(resultDays).minutes; // виводимо кількість хвилин
     secondsVal.textContent = convertMs(resultDays).seconds; // виводимо кількість секунд
     startBtn.disabled = true; // після запуску робить кнопку не активною
-    calendarFp.input.setAttribute('timer-on', 'timer-on');
+    calendarFp.input.setAttribute('disabled', 'disabled');
 
     // перевіряємо чи значення таймеру < 1 секунди, якщо так - зупиняємо таймер, очищуємо інтервал
     // виводимо повідомлення про завершення роботи таймеру.
