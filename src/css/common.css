@@ -16,13 +16,13 @@ img {
   display: block;
   max-width: 100%;
 }
-
+/* task 1 */
 .btn-color-switcher {
   width: 90px;
   height: 40px;
   cursor: pointer;
 }
-
+/* task 2 */
 .timer {
   display: flex; 
 }
@@ -51,3 +51,4 @@ img {
   text-align: center;
   margin-left: 10px;  
 }
+/* task 3 */
