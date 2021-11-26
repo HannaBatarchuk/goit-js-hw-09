@@ -31,7 +31,6 @@ const options = {
       Notify.failure('Please choose a date in the future'); // якщо дата в минулому, висвічується оповіщення
       // window.alert("Please choose a date in the future")
     }
-    //   console.log(selectedDates[0]);
   },
 };
 
