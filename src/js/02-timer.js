@@ -53,7 +53,7 @@ function onBtnStart() {
     // виводимо повідомлення про завершення роботи таймеру.
     if (resultDays < 1000) {
       clearInterval(timer);
-      calendarFp.input.removeAttribute('timer-on');
+      calendarFp.input.removeAttribute('disabled');
       Notify.success('Timer is finish!');
     }
   }, 1000);
