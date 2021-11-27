@@ -1,11 +1,22 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
+function createPromise(position, delay) {
+  const shouldResolve = Math.random() > 0.3;
+
+  return new Promise((resolve, reject) => {
+    if (shouldResolve) {
+      resolve({ position, delay });
+    } else {
+      reject({ position, delay });
+    }
+  });
+}
 const formSubmit = document.querySelector('form');
 formSubmit.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(element) {
   element.preventDefault();
-  let { delay, step, amount } = element.currentTarget; 
+  let { delay, step, amount } = element.currentTarget;
 
   delay = Number(delay.value);
   step = Number(step.value);
@@ -27,16 +38,4 @@ function onFormSubmit(element) {
       });
     delay += step;
   }
-}
-
-function createPromise(position, delay) {
-  const shouldResolve = Math.random() > 0.3;
-
-  return new Promise((resolve, reject) => {
-    if (shouldResolve) {
-      resolve({ position, delay });
-    } else {
-      reject({ position, delay });
-    }
-  });
 }
